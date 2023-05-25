@@ -7,7 +7,7 @@ def load_model():
   return model
 model=load_model()
 st.write("""
-# Car Classifier"""
+# Image Car Classifier"""
 )
 file=st.file_uploader("Please note that only .JPG files work with the program.",type=["jpg","png"])
 
