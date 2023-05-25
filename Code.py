@@ -9,7 +9,7 @@ model=load_model()
 st.write("""
 # Car Classifier"""
 )
-file=st.file_uploader("Choose a car photo from computer",type=["jpg","png"])
+file=st.file_uploader("Please note that only .JPG files work with the program.",type=["jpg","png"])
 
 from PIL import Image,ImageOps
 import numpy as np
@@ -21,7 +21,7 @@ def import_and_predict(image_data,model):
     prediction=model.predict(img_reshape)
     return prediction
 if file is None:
-    st.text("Please upload an image file")
+    st.text("Please upload a car image file")
 else:
     image=Image.open(file)
     st.image(image,use_column_width=True)
